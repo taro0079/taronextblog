@@ -11,7 +11,7 @@ const Nav = () => {
         <Navbar.Link href="/" color="inherit">
           HOME
         </Navbar.Link>
-        <Navbar.Link href="#" color="inherit">
+        <Navbar.Link href="/blog" color="inherit">
           BLOG
         </Navbar.Link>
         <Navbar.Link href="/bbs" color="inherit">
