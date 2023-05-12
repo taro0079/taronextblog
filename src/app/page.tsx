@@ -1,9 +1,7 @@
+import HomeContent from './components/BlogPost/HomeContent'
+
 const Home = () => {
-  return (
-    <div>
-      <div>test</div>
-    </div>
-  )
+  return <HomeContent />
 }
 
 export default Home
