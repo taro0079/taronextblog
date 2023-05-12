@@ -1,11 +1,11 @@
-"use client"
-import { Navbar, Text } from "@nextui-org/react"
+'use client'
+import { Navbar, Text } from '@nextui-org/react'
 
 const Nav = () => {
   return (
     <Navbar>
       <Navbar.Brand>
-        <Text b>Stoichiometric</Text>
+        <Text h3>Stoichiometric</Text>
       </Navbar.Brand>
       <Navbar.Content>
         <Navbar.Link href="/" color="inherit">
@@ -13,9 +13,6 @@ const Nav = () => {
         </Navbar.Link>
         <Navbar.Link href="/blog" color="inherit">
           BLOG
-        </Navbar.Link>
-        <Navbar.Link href="/bbs" color="inherit">
-          BBS
         </Navbar.Link>
       </Navbar.Content>
     </Navbar>
