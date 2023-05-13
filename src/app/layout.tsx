@@ -1,7 +1,5 @@
 import LayoutComponent from "./LayoutComponent";
 import Provider from "./Provider";
-import Nav from "./components/Navbar";
-import Footter from "./components/Navbar/Footter";
 import "./globals.css";
 import { M_PLUS_1 } from "next/font/google";
 
