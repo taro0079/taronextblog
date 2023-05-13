@@ -1,20 +1,20 @@
-'use client'
-import { Box } from '@/app/blog/components/PageContent'
-import { Col, Container, Row, Text } from '@nextui-org/react'
-import Link from 'next/link'
+"use client"
+import { Box } from "@/app/blog/components/PageContent"
+import { Col, Container, Row, Text } from "@nextui-org/react"
+import Link from "next/link"
 
 const HomeContent = () => {
   return (
-    <Container justify="center" alignItems="center" alignContent="center">
+    <Container css={{ alignSelf: "center" }}>
       <Col>
-        <Row justify="center" align="center">
+        <Row justify="center">
           <Text h1>Stoichiometric</Text>
         </Row>
         <Row justify="center" align="center">
           <Text>ようこそ！awesometaroのページです！</Text>
         </Row>
-        <Row justify="center" align="center" css={{ py: '$8' }}>
-          <Row gap={4} css={{ maxWidth: 'max-content' }}>
+        <Row justify="center" align="center" css={{ py: "$8" }}>
+          <Row gap={4} css={{ maxWidth: "max-content" }}>
             <Col>
               <Row justify="center">
                 <Link href="https://github.com/taro0079">Github</Link>
