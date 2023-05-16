@@ -8,22 +8,24 @@ const extractHeader = (text: string) => {
 
 const BlogPost = ({ articles }: { articles: Article[] }) => {
   return (
-    <div>
-      <h1>Blog</h1>
-      <div>
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="text-3xl pb-10 font-bold">Blog</h1>
+      <div className="flex flex-col gap-4">
         {articles.map((article) => {
           return (
             <Link key={article.id} href={`blog/${article.id}`}>
-              <div className="py-8">
-                <div>{article.title}</div>
-                <div>
-                  投稿日:{" "}
-                  {utcToZonedTime(
-                    new Date(article.publishedAt),
-                    "Asia/Tokyo"
-                  ).toLocaleString("ja-JP")}
+              <div className="border shadow p-4 rounded-lg">
+                <div style={{ borderBottomWidth: "1px" }} className="py-2">
+                  <h1 className="text-xl font-bold">{article.title}</h1>
+                  <div className="text-sm">
+                    投稿日:{" "}
+                    {utcToZonedTime(
+                      new Date(article.publishedAt),
+                      "Asia/Tokyo"
+                    ).toLocaleString("ja-JP")}
+                  </div>
                 </div>
-                <div>
+                <div className="text-sm mt-4">
                   {extractHeader(article.body).substring(0, 200) + "..."}
                 </div>
               </div>
