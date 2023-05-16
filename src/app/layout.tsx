@@ -1,5 +1,6 @@
 import Footter from "./components/Footter";
 import Nav from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { M_PLUS_1 } from "next/font/google";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={mplus.className}>
         <Nav />
         <div className="p-8">{children}</div>
+        <Analytics />
         <Footter />
       </body>
     </html>
