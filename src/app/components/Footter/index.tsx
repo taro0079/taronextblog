@@ -1,5 +1,3 @@
-"use client";
-
 const Footter = () => {
   const date = new Date();
   return (
