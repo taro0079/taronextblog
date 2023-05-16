@@ -1,5 +1,5 @@
-import LayoutComponent from "./LayoutComponent";
-import Provider from "./Provider";
+import Footter from "./components/Footter";
+import Nav from "./components/Navbar";
 import "./globals.css";
 import { M_PLUS_1 } from "next/font/google";
 
@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mplus.className}>
-        <Provider>
-          <LayoutComponent>{children}</LayoutComponent>
-        </Provider>
+        <Nav />
+        <div className="p-8">{children}</div>
+        <Footter />
       </body>
     </html>
   );

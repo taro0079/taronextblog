@@ -1,22 +1,15 @@
-'use client'
-import { Navbar, Text } from '@nextui-org/react'
+import Link from "next/link";
 
 const Nav = () => {
   return (
-    <Navbar>
-      <Navbar.Brand>
-        <Text h3>Stoichiometric</Text>
-      </Navbar.Brand>
-      <Navbar.Content>
-        <Navbar.Link href="/" color="inherit">
-          HOME
-        </Navbar.Link>
-        <Navbar.Link href="/blog" color="inherit">
-          BLOG
-        </Navbar.Link>
-      </Navbar.Content>
-    </Navbar>
-  )
-}
+    <div className="flex shadow w-full p-4 justify-between">
+      <h1 className="font-bold">Stoichiometric</h1>
+      <div className="flex gap-4">
+        <Link href="/">HOME</Link>
+        <Link href="/blog">BLOG</Link>
+      </div>
+    </div>
+  );
+};
 
-export default Nav
+export default Nav;
