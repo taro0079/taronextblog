@@ -7,7 +7,6 @@ const Page = async () => {
   const articles = preData.contents;
   const totalCount = preData.totalCount;
   const limit = preData.limit;
-  console.log(articles);
   return (
     <div>
       <BlogPost articles={articles} />
