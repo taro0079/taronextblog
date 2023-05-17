@@ -1,6 +1,18 @@
-import { BlogData } from "../../page";
 import BlogPost from "@/app/components/BlogPost";
 import Pagination from "@/app/components/Pagination";
+import { BlogData, getPreArticleData } from "../../getPreArticleData";
+import { Generator } from "@/app/components/Pagination/generater";
+
+export async function generateStaticParams() {
+  const data = await getPreArticleData();
+  const paginate = Generator(data.totalCount, data.limit);
+  const paths = paginate.map((p) => {
+    return {
+      id: p.toString(),
+    };
+  });
+  return [...paths];
+}
 
 const getOffsetBlogData = async (id: number, limit: number) => {
   const offset = (id - 1) * limit;

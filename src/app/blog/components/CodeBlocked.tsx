@@ -1,7 +1,7 @@
 import "highlight.js/styles/tokyo-night-dark.css";
 import { load } from "cheerio";
-import { Article } from "../page";
 import hljs from "highlight.js";
+import { Article } from "../getPreArticleData";
 
 const CodeBlocked = (article: Article) => {
   const $ = load(article.body, null, false);
