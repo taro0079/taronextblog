@@ -1,4 +1,4 @@
-import { Article } from "@/app/blog/page";
+import { Article } from "@/app/blog/getPreArticleData";
 import { utcToZonedTime } from "date-fns-tz";
 import Link from "next/link";
 
