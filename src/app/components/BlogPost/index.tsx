@@ -25,9 +25,9 @@ const BlogPost = ({ articles }: { articles: Article[] }) => {
                     ).toLocaleString("ja-JP")}
                   </div>
                 </div>
-                <div className="text-sm mt-4">
+                <p className="text-sm mt-4 break-all">
                   {extractHeader(article.body).substring(0, 200) + "..."}
-                </div>
+                </p>
               </div>
             </Link>
           );
