@@ -6,7 +6,7 @@ const Nav = () => {
       <h1 className="font-bold">Stoichiometric</h1>
       <div className="flex gap-4">
         <Link href="/">HOME</Link>
-        <Link href="/blog">BLOG</Link>
+        <Link href="/blog/pages/1">BLOG</Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { utcToZonedTime } from "date-fns-tz";
 import parse from "react-html-parser";
 import CodeBlocked from "../components/CodeBlocked";
 import { Article, getPreArticleData } from "../getPreArticleData";
+import "./blog.css";
 
 export async function generateStaticParams() {
   const data = await getPreArticleData();
@@ -36,17 +37,19 @@ const Page = async (ctx: { params: { article_id: string } }) => {
   const article = CodeBlocked(prearticle);
 
   return (
-    <div className="justify-center">
-      <h2 className="md:hidden">{article.title}</h2>
-      <h1 className="hidden md:flex">{article.title}</h1>
-      <p>
-        投稿日:{" "}
-        {utcToZonedTime(
-          new Date(article.publishedAt),
-          "Asia/Tokyo"
-        ).toLocaleString("ja-JP")}
-      </p>
-      <div className="justify-center">
+    <div className="w-2/3">
+      <div className="mb-8 pb-2" style={{ borderBottomWidth: "1px" }}>
+        <h2 className="md:hidden">{article.title}</h2>
+        <h1 className="hidden md:flex text-3xl">{article.title}</h1>
+        <p>
+          投稿日:{" "}
+          {utcToZonedTime(
+            new Date(article.publishedAt),
+            "Asia/Tokyo"
+          ).toLocaleString("ja-JP")}
+        </p>
+      </div>
+      <div className="justify-center blog-content">
         <div>{parse(article.body)}</div>
       </div>
     </div>

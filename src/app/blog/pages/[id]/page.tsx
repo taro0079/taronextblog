@@ -39,7 +39,7 @@ const Page = async (ctx: { params: { id: number } }) => {
   const limit = preData.limit;
   const articles = preData.contents;
   return (
-    <div>
+    <div className="md:w-2/3">
       <BlogPost articles={articles} />
       <Pagination totalCount={totalCount} limit={limit} />
     </div>
