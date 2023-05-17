@@ -1,4 +1,4 @@
-h2.blog-title {
+.blog-content h2 {
   @apply text-2xl mt-8 mb-2;
 }
 .blog-content p {
@@ -7,4 +7,8 @@ h2.blog-title {
 
 .blog-content a {
   @apply text-blue-400 underline;
+}
+
+h2.blog-title {
+  @apply text-3xl mb-4;
 }
