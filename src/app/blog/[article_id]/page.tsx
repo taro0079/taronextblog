@@ -20,6 +20,7 @@ const getArticle = async (url: string) => {
       "X-MICROCMS-API-KEY": `${process.env.X_MICROCMS_API_KEY}`,
       "Content-Type": "application/json",
     },
+    next: { revalidate: 60 },
   });
   if (!res.ok) {
     throw new Error("Failed to fetch data from microCMS");

@@ -23,6 +23,7 @@ const getOffsetBlogData = async (id: number, limit: number) => {
         "X-MICROCMS-API-KEY": `${process.env.X_MICROCMS_API_KEY}`,
         "Content-Type": "application/json",
       },
+      next: { revalidate: 60 },
     }
   );
   if (!data.ok) {
