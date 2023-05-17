@@ -1,4 +1,4 @@
-.blog-content h2 {
+h2.blog-title {
   @apply text-2xl mt-8 mb-2;
 }
 .blog-content p {
