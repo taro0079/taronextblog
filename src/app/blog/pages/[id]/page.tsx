@@ -1,5 +1,4 @@
-import id from "date-fns/locale/id";
-import { BlogData } from "../page";
+import { BlogData } from "../../page";
 import BlogPost from "@/app/components/BlogPost";
 import Pagination from "@/app/components/Pagination";
 
