@@ -1,0 +1,10 @@
+.blog-content h2 {
+  @apply text-2xl mt-8 mb-2;
+}
+.blog-content p {
+  @apply py-2;
+}
+
+.blog-content a {
+  @apply text-blue-400 underline;
+}
