@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mplus.className}>
         <Nav />
-        <div className="p-8">{children}</div>
+        <div className="p-8 flex justify-center">{children}</div>
         <Analytics />
         <Footter />
       </body>
