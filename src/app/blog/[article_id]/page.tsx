@@ -1,6 +1,7 @@
 import { utcToZonedTime } from "date-fns-tz";
 import parse from "react-html-parser";
 import { Article } from "../page";
+import CodeBlocked from "../components/CodeBlocked";
 
 const getArticle = async (url: string) => {
   const res = await fetch(url, {
@@ -19,7 +20,8 @@ const Page = async (ctx: { params: { article_id: string } }) => {
   const articleId = ctx.params.article_id;
   const url = "https://taroblog.microcms.io/api/v1/blog/" + articleId;
 
-  const article = await getArticle(url);
+  const prearticle = await getArticle(url);
+  const article = CodeBlocked(prearticle);
   return (
     <div className="justify-center">
       <h2 className="md:hidden">{article.title}</h2>
