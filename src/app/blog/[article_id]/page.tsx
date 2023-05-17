@@ -37,7 +37,7 @@ const Page = async (ctx: { params: { article_id: string } }) => {
   const article = CodeBlocked(prearticle);
 
   return (
-    <div className="w-2/3">
+    <div className="w-full md:w-2/3">
       <div className="mb-8 pb-2" style={{ borderBottomWidth: "1px" }}>
         <h2 className="md:hidden">{article.title}</h2>
         <h1 className="hidden md:flex text-3xl">{article.title}</h1>
