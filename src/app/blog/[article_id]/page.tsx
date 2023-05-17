@@ -49,8 +49,8 @@ const Page = async (ctx: { params: { article_id: string } }) => {
           ).toLocaleString("ja-JP")}
         </p>
       </div>
-      <div className="justify-center blog-content">
-        <div>{parse(article.body)}</div>
+      <div className="justify-center blog-content break-all">
+        {parse(article.body)}
       </div>
     </div>
   );
