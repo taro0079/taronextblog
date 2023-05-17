@@ -39,8 +39,8 @@ const Page = async (ctx: { params: { article_id: string } }) => {
   return (
     <div className="w-full md:w-2/3">
       <div className="mb-8 pb-2" style={{ borderBottomWidth: "1px" }}>
-        <h2 className="md:hidden">{article.title}</h2>
-        <h1 className="hidden md:flex text-3xl">{article.title}</h1>
+        <h2 className="md:hidden blog-title">{article.title}</h2>
+        <h1 className="hidden md:flex text-3xl blog-title">{article.title}</h1>
         <p>
           投稿日:{" "}
           {utcToZonedTime(
