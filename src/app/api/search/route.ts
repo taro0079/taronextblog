@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { BlogData } from "../../blog/getPreArticleData"
-import { NextRequest } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 
 const fetcher = async (query: string) => {
     const url = "https://taroblog.microcms.io/api/v1/blog?q=" + query
@@ -26,5 +26,5 @@ export async function GET(req: NextRequest) {
         return { status: 400, body: { message: "query is required" } }
     }
     const data = await fetcher(query)
-    return Response.json(data)
+    return NextResponse.json(data)
 }
