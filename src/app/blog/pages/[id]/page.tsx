@@ -5,6 +5,7 @@ import { Generator } from "@/app/components/Pagination/generater"
 import { Input } from "@nextui-org/input"
 import { Button } from "@nextui-org/button"
 import React, { ChangeEvent, useState } from "react"
+import SearchBar from "@/app/components/SearhBar"
 
 export async function generateStaticParams() {
   const data = await getPreArticleData()
